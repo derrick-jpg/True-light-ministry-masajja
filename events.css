@@ -1,0 +1,139 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image:url(images/howtoreadbiblepic.webp) ;
+    color: #333;
+}
+
+header {
+    text-align: center;
+    background-color: #2c2e2c;
+    color: white;
+    padding: 20px 0;
+}
+
+.header-image {
+    width: 300px;
+    height: auto;
+    margin-top: 10px;
+}
+
+main {
+    padding: 20px;
+}
+
+.churches {
+    margin: 0 auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #ddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: aliceblue;
+    background-color: #333;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+td img {
+    width: 100px;
+    height: auto;
+    border-radius: 1px;
+}
+
+.slideshow {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.slideshow-container {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+}
+
+.slideshow-images {
+    display: flex;
+    justify-content: center;
+}
+
+.slideshow-images img {
+    width: 300px;
+    height: auto;
+    margin: 5px;
+    display: none; /* Initially hide all images */
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    border-radius: 5px;
+    transform: translateY(-50%);
+}
+
+.prev {
+    left: 0;
+}
+
+.next {
+    right: 0;
+}
+
+.videos {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.video-container {
+    justify-content: center;
+    gap: 20px;
+}
+
+iframe {
+    width: 400px;
+    height: 400px;
+    border: none;
+}
+
+footer {
+    text-align: center;
+    padding: 10px 0;
+    background-color: #333;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 5px 0;
+}
+h1{
+    font-size: 40px;
+}

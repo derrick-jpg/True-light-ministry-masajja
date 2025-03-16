@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>True Light Ministry</title>
+    <link rel="stylesheet" href="events.css">
+</head>
+<body>
+    <header>
+        <h1><b>TRUE LIGHT MINISTRY</b></h1>
+        <p><b>MRS PETUA KATUMBA <br>Executive Director</b></p>
+        <img src="images/WhatsApp Image 2025-03-16 at 13.47.08_21e8f571.jpg" alt="True Light Ministry" class="header-image">
+    </header>
+
+    <main>
+        <section class="churches">
+            <h2>Our Churches</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Church Name</th>
+                        <th>Image</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id="church-table-body">
+                    <tr>
+                        <td>Church 1</td>
+                        <td><img src="images/WhatsApp Image 2025-03-15 at 18.50.15_3a18b10b.jpg" alt="Church 1"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 2</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 2"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 3</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 3"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 4</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 4"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 5</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 5"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 6</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 6"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                    <tr>
+                        <td>Church 7</td>
+                        <td><img src="https://via.placeholder.com/100" alt="Church 7"></td>
+                        <td>Join us every Sunday at 10 AM.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section class="slideshow">
+            <h2>ENJOY OUR GALLERY</h2>
+            <div class="slideshow-container">
+                <div class="slideshow-images">
+                    <img src="images/IMG-20250315-WA0039.jpg" alt="Slide 1">
+                    <img src="images/IMG-20250315-WA0040.jpg" alt="Slide 2">
+                    <img src="images/IMG-20250315-WA0041.jpg" alt="Slide 3">
+                    <img src="images/IMG-20250315-WA0042.jpg" alt="Slide 5">
+                    <img src="images/WhatsApp Image 2025-03-15 at 18.48.01_226a4769.jpg" alt="Slide 6">
+                    <img src="images/WhatsApp Image 2025-03-15 at 22.46.18_2a865be2.jpg" alt="Slide 7">
+                </div>
+                <button class="prev" onclick="changeSlide(-1)">&#10094;</button>
+                <button class="next" onclick="changeSlide(1)">&#10095;</button>
+            </div>
+        </section>
+
+        <section class="videos">
+            <h2>Watch Our Videos</h2>
+            <div class="video-container">
+                <iframe src="images/VID-20250315-WA0011.mp4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="images/VID-20250316-WA0003.mp4" frameborder="0" allowfullscreen></iframe>
+                <br>
+                <iframe src="images/VID-20250316-WA0002.mp4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="images/VID-20250315-WA0012.mp4" frameborder="0" allowfullscreen></iframe>
+                <br>
+                <iframe src="images/VID-20250315-WA0010.mp4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="images/VID-20250315-WA0009.mp4" frameborder="0" allowfullscreen></iframe>
+                <iframe src="images/VID-20250316-WA0003.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>True Light Ministry &copy; <span id="current-date"></span></p>
+        <p>Visit us for spiritual growth and community!</p>
+    </footer>
+
+    <script>
+        // Current date and time
+        const currentDate = new Date();
+        const options = { year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric', second: 'numeric' };
+        document.getElementById('current-date').textContent = currentDate.toLocaleString('en-US', options);
+
+        // Slideshow functionality
+        let slideIndex = 0;
+
+        function showSlides() {
+            const slides = document.querySelectorAll('.slideshow-images img');
+            slides.forEach((slide, index) => {
+                slide.style.display = index >= slideIndex && index < slideIndex + 2 ? 'block' : 'none';
+            });
+        }
+
+        function changeSlide(n) {
+            slideIndex += n;
+            const slides = document.querySelectorAll('.slideshow-images img');
+            if (slideIndex < 0) slideIndex = slides.length - 2; // Loop back to the last two
+            if (slideIndex >= slides.length - 1) slideIndex = 0; // Loop back to the first two
+            showSlides();
+        }
+
+        // Automatic slideshow change
+        setInterval(() => {
+            changeSlide(1);
+        }, 5000); // Change slide every 5 seconds
+
+        showSlides(); // Initial call to show the first set of images
+    </script>
+</body>
+</html>
+
+
